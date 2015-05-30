@@ -1,0 +1,13 @@
+{
+  "name": "bariter/web",
+  "description": "This box contains images for web-servers on virtualbox.",
+  "versions": [{
+    "version": "0.1.0",
+    "providers": [{
+      "name": "virtualbox",
+      "url": "https://s3.amazonaws.com/bariter-virtualbox/vb-web.box",
+      "checksum_type": "sha1",
+      "checksum": "00ed12f134db4ab6f76fef5f2c11546e432df2a7"
+    }]
+  }]
+}
