@@ -1,0 +1,9 @@
+---
+- name: Install rbenv, ruby
+  hosts: all
+  remote_user: vagrant
+
+  roles:
+    - common
+    - rbenv
+    - ruby
