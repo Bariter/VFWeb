@@ -1,0 +1,16 @@
+---
+# Dir that contains cloned repository of rbenv from github.
+rbenv_repo_dir: /home/vagrant/.rbenv
+
+# Dir that contains cloned repository of ruby-build from github.
+# This is used for rbenv.
+ruby_build_repo_dir: /home/vagrant/.rbenv/plugins/ruby-build
+
+# Ruby version used for Ruby on Rails 4.
+ruby_version: 2.1.2
+
+ruby_deps:
+  - build-essential
+  - libssl-dev
+  - libsqlite3-dev
+  - libreadline-dev

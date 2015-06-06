@@ -1,0 +1,18 @@
+---
+- include: prereqs.yml
+
+- name: Clone rbenv from GitHub
+  git: repo=https://github.com/sstephenson/rbenv.git dest={{ rbenv_repo_dir }} 
+
+- name: Copy the install script for rbenv
+  copy: src=install_rbenv.bash dest=~/install_rbenv.bash mode=700
+
+- name: Set the rbenv configurations into .bash_profile
+  lineinfile: dest=~/.bash_profile insertafter=EOF line="source ~/install_rbenv.bash" create=yes
+
+- name: clone ruby-build from GitHub
+  git: repo=https://github.com/sstephenson/ruby-build.git dest={{ ruby_build_repo_dir }} 
+
+- name: Check if rbenv is installed correctly
+  shell: /bin/bash -lc "rbenv --version"
+

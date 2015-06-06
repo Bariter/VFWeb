@@ -38,7 +38,7 @@ Vagrant.configure(2) do |config|
 
       v.gui = false
     end
-    web1.vm.provision :ansible, :playbook => "playbook.yml"
+    web1.vm.provision :ansible, :playbook => "site.yml"
   end
 
   unless Vagrant.has_plugin?('vagrant-s3auth')
