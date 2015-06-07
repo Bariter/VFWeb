@@ -36,6 +36,9 @@ Vagrant.configure(2) do |config|
       # Actual VM name that will be created for virtualbox
       v.name = "vb-web1"
 
+      v.memory = 1024
+      v.cpus = 2
+
       v.gui = false
     end
     web1.vm.provision :ansible, :playbook => "site.yml"
