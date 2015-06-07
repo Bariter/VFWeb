@@ -1,0 +1,6 @@
+- name: Copy Gemfile
+  copy: src=Gemfile dest=~/Gemfile
+
+- name: Install Rails4
+  shell: /bin/bash -lc "bundle install --path ~/vendor/bundle"
+

@@ -30,6 +30,7 @@ Vagrant.configure(2) do |config|
     web1.vm.network :private_network, ip: "192.168.33.11",
         virtualbox__intnet: true
     web1.vm.network :forwarded_port, guest: 22, host: 2002, id: "ssh"
+    web1.vm.network :forwarded_port, guest: 80, host: 8080, id: "http"
 
     web1.vm.provider :virtualbox do |v, override|
 

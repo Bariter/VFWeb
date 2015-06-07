@@ -1,0 +1,16 @@
+---
+- name: Install nginx
+  apt: name=nginx state=present
+  sudo: yes
+
+- name: Remove sites-available/default
+  file: path=/etc/nginx/sites-available/default state=absent
+  sudo: yes
+  notify:
+    - restart nginx
+
+- name: Place app-specific config into conf.d
+  copy: src=video_freaks.conf dest=/etc/nginx/conf.d/video_freaks.conf
+  sudo: yes
+  notify:
+    - restart nginx
