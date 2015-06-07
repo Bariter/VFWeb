@@ -2,6 +2,9 @@
 # Dir that contains cloned repository of rbenv from github.
 rbenv_repo_dir: /home/vagrant/.rbenv
 
+# Dir of video-freaks app.
+app_repo_dir: /vagrant/video-freaks
+
 # Dir that contains cloned repository of ruby-build from github.
 # This is used for rbenv.
 ruby_build_repo_dir: /home/vagrant/.rbenv/plugins/ruby-build

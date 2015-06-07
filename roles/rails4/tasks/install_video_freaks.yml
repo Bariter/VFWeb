@@ -1,0 +1,9 @@
+---
+- name: Clone rails project repo from GitHub
+  git: repo=https://github.com/Bariter/video-freaks.git dest={{ app_repo_dir }}
+
+- name: Bundle install
+  shell: /bin/bash -lc "cd {{ app_repo_dir }} && bundle install --path vendor/bundle"
+
+- name: Start application
+  shell: /bin/bash -lc "cd {{ app_repo_dir }} && bundle exec unicorn_rails -c config/unicorn.rb -D"
