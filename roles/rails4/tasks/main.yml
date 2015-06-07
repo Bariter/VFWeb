@@ -1,0 +1,11 @@
+# Prerequisites
+- include: prereqs.yml
+
+# Install rails4
+#- include: install_rails4.yml
+
+# Clean up rails4
+#- include: cleanup.yml
+
+# Install rails project
+- include: install_video_freaks.yml

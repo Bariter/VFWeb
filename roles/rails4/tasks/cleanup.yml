@@ -1,0 +1,8 @@
+- name: Remove Gemfile
+  file: path=~/Gemfile state=absent
+
+- name: Remove Gemfile.lock
+  file: path=~/Gemfile.lock state=absent
+
+- name: Remove temp gems
+  file: path=~/vendor state=absent

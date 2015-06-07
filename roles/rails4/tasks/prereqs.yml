@@ -1,0 +1,3 @@
+---
+- name: Install bundler
+  shell: /bin/bash -lc "rbenv exec gem install bundler && rbenv rehash"

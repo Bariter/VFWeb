@@ -1,5 +1,5 @@
 ---
-- name: Install rbenv, ruby
+- name: Install rbenv, ruby, rails4 app, unicorn, nginx
   hosts: all
   remote_user: vagrant
 
@@ -7,3 +7,5 @@
     - common
     - rbenv
     - ruby
+    - rails4
+    - nginx
