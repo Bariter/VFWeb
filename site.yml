@@ -5,6 +5,7 @@
 
   roles:
     - common
+    - mongodb
     - rbenv
     - ruby
     - rails4

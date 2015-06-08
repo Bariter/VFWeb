@@ -1,0 +1,12 @@
+---
+- name: Import the public key used by the package management system
+  shell: apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+  sudo: yes
+
+- name: Create a list file for MongoDB
+  shell: echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+  sudo: yes
+
+- name: Install the MongoDB packages with reloading local package database
+  apt: name=mongodb-org update_cache=yes
+  sudo: yes
