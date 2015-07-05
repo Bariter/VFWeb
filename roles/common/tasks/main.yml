@@ -1,4 +1,12 @@
 ---
+- name: Install locale
+  apt: name=language-pack-ja update_cache=yes
+  sudo: yes
+
+- name: Set timezone to Asia/Tokyo
+  shell: echo "Asia/Tokyo" | tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata
+  sudo: yes
+
 - name: Install git
   apt: name=git state=present
   sudo: yes

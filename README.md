@@ -25,3 +25,13 @@ Ask for your account manager about your credentials.
 
 That's pretty much about it. You can now start using the box by `vagrant up`.
 For the first time, it will take some additional time for this command to download the box.
+
+### AWS Provider
+When you want to use aws-provider, you need to have the following additional configuration.
+
+- Place the .pem file, which is a private key used for accessing the aws ec2, in the project directory.
+- Create and place the .env file in the project directory: for example,
+```
+AWS_ACCESS_KEY_ID='AKI...'
+AWS_SECRET_ACCESS_KEY='Bv2...'
+```
