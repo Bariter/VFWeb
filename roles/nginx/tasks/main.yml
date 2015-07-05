@@ -10,7 +10,7 @@
     - restart nginx
 
 - name: Place app-specific config into conf.d
-  copy: src=video_freaks.conf dest=/etc/nginx/conf.d/video_freaks.conf
+  template: src=video_freaks.conf dest=/etc/nginx/conf.d/video_freaks.conf
   sudo: yes
   notify:
     - restart nginx

@@ -1,13 +1,13 @@
 ---
 # Dir that contains cloned repository of rbenv from github.
-rbenv_repo_dir: /home/vagrant/.rbenv
+rbenv_repo_dir: ~/.rbenv
 
 # Dir of video-freaks app.
-app_repo_dir: /vagrant/video-freaks
+app_repo_dir: ~/video-freaks
 
 # Dir that contains cloned repository of ruby-build from github.
 # This is used for rbenv.
-ruby_build_repo_dir: /home/vagrant/.rbenv/plugins/ruby-build
+ruby_build_repo_dir: ~/.rbenv/plugins/ruby-build
 
 # Ruby version used for Ruby on Rails 4.
 ruby_version: 2.1.2

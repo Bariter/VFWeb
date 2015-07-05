@@ -5,5 +5,8 @@
 - name: Bundle install
   shell: /bin/bash -lc "cd {{ app_repo_dir }} && bundle install --path vendor/bundle"
 
+- name: Set secret key for production.
+  shell: /bin/bash -lc "echo \"export SECRET_KEY_BASE=`bundle exec rake secret`\""
+
 - name: Start application
   shell: /bin/bash -lc "cd {{ app_repo_dir }} && bundle exec unicorn_rails -c config/unicorn.rb -D"
