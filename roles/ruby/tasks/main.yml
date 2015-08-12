@@ -1,6 +1,6 @@
 ---
 - name: Install Ruby {{ ruby_version }}
-  shell: /bin/bash -lc "rbenv install {{ ruby_version }}"
+  shell: /bin/bash -lc "rbenv install {{ ruby_version }} -v > ./install.log"
 
 - name: Sets global ruby version
   shell: /bin/bash -lc "rbenv global {{ ruby_version }} && rbenv rehash"
