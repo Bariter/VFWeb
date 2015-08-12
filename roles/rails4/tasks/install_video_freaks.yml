@@ -9,4 +9,4 @@
   shell: /bin/bash -lc "echo \"export SECRET_KEY_BASE=`bundle exec rake secret`\""
 
 - name: Start application
-  shell: /bin/bash -lc "cd {{ app_repo_dir }} && bundle exec unicorn_rails -c config/unicorn.rb -D"
+  shell: /bin/bash -lc "cd {{ app_repo_dir }} && bundle exec unicorn -c config/unicorn.rb -D"
