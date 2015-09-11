@@ -35,3 +35,13 @@ When you want to use aws-provider, you need to have the following additional con
 AWS_ACCESS_KEY_ID='AKI...'
 AWS_SECRET_ACCESS_KEY='Bv2...'
 ```
+
+## Run
+### On Local Machine
+```sh
+$ vagrant up
+```
+### On AWS
+```sh
+$ vagrant up --provider=aws
+```
