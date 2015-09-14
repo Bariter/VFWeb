@@ -8,7 +8,7 @@
   copy: src=install_rbenv.bash dest=~/install_rbenv.bash mode=700
 
 - name: Set the rbenv configurations into .bash_profile
-  lineinfile: dest=~/.bash_profile insertafter=EOF line="source ~/install_rbenv.bash" create=yes
+  lineinfile: dest=~/.bash_profile insertafter=EOF line="source ~/install_rbenv.bash\nsource ~/.bashrc\n" create=yes
 
 - name: clone ruby-build from GitHub
   git: repo=https://github.com/sstephenson/ruby-build.git dest={{ ruby_build_repo_dir }} 
