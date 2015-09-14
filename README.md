@@ -26,6 +26,23 @@ Ask for your account manager about your credentials.
 That's pretty much about it. You can now start using the box by `vagrant up`.
 For the first time, it will take some additional time for this command to download the box.
 
+### Extra settings For Local Run
+Modify the following configuration when you want to run the machine on your local machine.
+```
+vi <PROJECT_DIR>/project_directory
+
+!!! Modify this to your user github username. This will be used to refer to the github
+repository of your forked "video-freaks" project.
+
+...
+Modify here
+github_user: Bariter
+
+to your github user name
+github_user: <GitHub User Name>
+...
+```
+
 ### AWS Provider
 When you want to use aws-provider, you need to have the following additional configuration.
 
