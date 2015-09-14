@@ -17,3 +17,6 @@ ruby_deps:
   - libssl-dev
   - libsqlite3-dev
   - libreadline-dev
+
+github_user: Bariter # Modify here
+video_freaks_github_repo: "https://github.com/{{ github_user }}/video-freaks.git"
